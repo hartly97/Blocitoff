@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.4'
+
+ruby '2.4.0'
+
 group :production do
   gem 'pg'
 
