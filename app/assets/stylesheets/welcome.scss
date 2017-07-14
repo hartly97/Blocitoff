@@ -1,3 +1,39 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*.jumbotron{
+  border: 2px green solid;
+  width: 85vw;
+  vertical-align: middle;
+  min-height: 60vh;
+  margin:auto;
+  padding: 2%;
+  background-image: image_url('genealogy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}*/
+
+#jumbotron{
+  border: 2px orange solid;
+  width: 75vw;
+  vertical-align: middle;
+  min-height: 60vh;
+  margin:auto;
+  padding: 3%;
+
+}
+.banner {
+  text-align: center;
+  background-color: orange;
+  min-height: 90%;
+  border: 8px darkorange solid;
+  margin: auto;
+  padding: 2% 8%;
+  width: 95%;
+  vertical-align: middle;
+}
+
+@media (min-width: 1000px) {
+
+  }
