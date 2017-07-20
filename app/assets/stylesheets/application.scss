@@ -17,4 +17,12 @@
  @import "bootstrap-sprockets";
   @import "bootstrap";
 
-  
+
+  a.glyphicon.glyphicon-ok {
+    top: 11px;
+}
+
+.d-flex.align-self-start.mr-3 {
+    float: left;
+    margin-right: 2%;
+}
