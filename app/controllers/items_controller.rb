@@ -1,19 +1,20 @@
 class ItemsController < ApplicationController
 
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
 
   def index
-    @item = Item.visible_to(current_user)
+    @items = Item.all
   end
 
   def show
-    @item = Item.new
     @item = Item.find(params[:id])
   end
 
   def new
+    console
     @item = Item.new
   end
+end
 
   def create
     @item = Item.new(user: current_user)
@@ -44,4 +45,3 @@ end
   def item_params
     params.require(:item).permit(:name)
   end
-end

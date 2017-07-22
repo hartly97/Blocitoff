@@ -1,19 +1,24 @@
+<div class="container-fluid">
 <h3> <%= @user.email %> </h3>
-
 <div class="row">
-  <div class="col-md-6">
-    <p id="index-title"><%#= link_to 'Edit Your Profile', edit_user_registration_path %></p>
-
-    <h3>Create a New To-Do Item</h3>
-    <%= render partial: 'items/form' %>
+  <div class="col-md-9">
+    <p>Create To-Do items</p>
+    <p>Your items will be deleted after 7 days.</p>
+    <p>Mark items complete.</p>
   </div>
-
-  <div class="col-md-6">
-  <!--&nbsp-->
+</div>
+<div class="row">
+  <div class="col-md-9">
     <h3>Current Items:</h3>
-  <% @items.each do |item| %>
+    <% @items.each do |item| %>
     <%= render partial: 'items/item', locals: { item: item } %>
-  <% end %>
+    <% end %>
   </div>
-
+</div>
+<div class="row">
+  <div class="col-md-9">
+    <h3>Create New To-Do</h3>-->
+    <%= render partial: 'items/form' %>
+    <% end %>
+</div>
 </div>

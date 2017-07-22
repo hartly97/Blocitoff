@@ -8,7 +8,7 @@
 #  u.skip_confirmation!
 #  u.save!
 #end
-
+#users= User.all
 
 #5.times do
 #  Item.create!(
