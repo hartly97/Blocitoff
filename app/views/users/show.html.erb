@@ -1,19 +1,16 @@
-<h3> <%= @user.email %> </h3>
+<h3> <%#= @user.email %> </h3>
 
-<div class="row">
-  <div class="col-md-6">
-    <p id="index-title"><%#= link_to 'Edit Your Profile', edit_user_registration_path %></p>
+  <div class="row">
+    <div class="col-md-6">
+      <p id="index-title"></p>
 
-    <h3>Create a New To-Do Item</h3>
-    <%= render partial: 'items/form' %>
-  </div>
+      <h3>Create a New To-Do Item</h3>
+      <%= render partial: 'items/form' %>
 
-  <div class="col-md-6">
-  <!--&nbsp-->
-    <h3>Current Items:</h3>
-  <% @items.each do |item| %>
-    <%= render partial: 'items/item', locals: { item: item } %>
-  <% end %>
-  </div>
 
-</div>
+    <div class="col-md-6">
+
+      <h3>Current Items:</h3>
+    <%# @items.each do |item| %>
+      <%#= render partial: 'items/item', locals: { item: item } %>
+    <%# end %>

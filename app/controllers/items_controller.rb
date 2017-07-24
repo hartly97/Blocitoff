@@ -1,9 +1,8 @@
 class ItemsController < ApplicationController
 
-  before_action :authenticate_user!
 
   def index
-    @item = Item.visible_to(current_user)
+    @items = Item.all#visible_to(current_user)
   end
 
   def show
@@ -16,7 +15,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(user: current_user)
+    @item = Item.new(item_params)#(user: current_user)
     @item.assign_attributes(item_params)
 
     if @item.save

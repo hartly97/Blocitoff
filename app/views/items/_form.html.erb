@@ -1,8 +1,16 @@
-<%= form_for [@user, @user.items.new] do |f| %>
-    <div class="form-group">
-        <%= f.text_field :name, class: "form-control", placeholder: "Enter a new item" %>
-    </div>
-    <div class="form-group">
-        <%= f.submit "Save item", class: "btn btn-success" %>
-    </div>
-<% end %>
+  <%#= form_for [@user, @user.item.new] do |f| %>
+          <%#= f.text_field :name, class: "form-control", placeholder: "Enter a new item" %>
+
+          <%#= f.submit "Save item", class: "btn btn-success" %>
+
+
+
+
+  <%= form_for [@user, @user.items.new] do |f| %>
+      <div class="form-group">
+          <%= f.text_field :name, class: "form-control", placeholder: "Enter a new item" %>
+      </div>
+      <div class="form-group">
+          <%= f.submit "Save item", class: "btn btn-success" %>
+      </div>
+  <% end %>
