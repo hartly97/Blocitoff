@@ -43,6 +43,10 @@ GEM
       execjs
     awesome_print (1.8.0)
     bcrypt (3.1.11)
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -81,6 +85,7 @@ GEM
       railties (>= 3.2, < 5.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    gravatar_image_tag (1.2.0)
     i18n (0.8.6)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -106,6 +111,8 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
+    nyan-cat-formatter (0.12.0)
+      rspec (>= 2.99, >= 2.14.2, < 4)
     orm_adapter (0.5.0)
     pg (0.21.0)
     pry (0.10.4)
@@ -151,6 +158,10 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rspec (3.6.0)
+      rspec-core (~> 3.6.0)
+      rspec-expectations (~> 3.6.0)
+      rspec-mocks (~> 3.6.0)
     rspec-core (3.6.0)
       rspec-support (~> 3.6.0)
     rspec-expectations (3.6.0)
@@ -225,6 +236,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  better_errors
   bootstrap-sass
   byebug
   coffee-rails (~> 4.2)
@@ -233,9 +245,11 @@ DEPENDENCIES
   faker
   figaro
   font-awesome-rails
+  gravatar_image_tag
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  nyan-cat-formatter
   pg
   pry-rails
   rails (~> 5.0.4)
@@ -254,4 +268,8 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.15.2
+=======
+   1.15.3
+>>>>>>> Jose

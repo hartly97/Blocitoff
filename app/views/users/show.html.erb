@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h3> <%= @user.email %> </h3>
 
 <div class="row">
@@ -16,4 +17,28 @@
   <% end %>
   </div>
 
+=======
+<div class="container">
+  <h3> Let's start started <%= current_user.email %>!</h3>
+  </br>
+<div class="container">
+  <h4> Here you can:</h4>
+    <p> Create To-Do items</p>
+    <p>Mark items complete by clicking the checkmark.</p>
+    <p><strong>Your items will delete after 7 days.</strong><p>
+</div>
+</br>
+</br>
+<div class="container">
+  <h4>My Pending Items:</h4>
+    <%= render partial: "items/item", locals: {user: @user, items: @user.items.where(completed: false)} %>
+</br>
+<h4>My Completed Items:</h4>
+  <%= render partial: "items/item", locals: {user: @user, items: @user.items.where(completed: true)} %>
+</br>
+
+  <h4>Add a To-Do item: </h4>
+    <%= render partial: "items/form", locals: {user: @user} %>
+</div>
+>>>>>>> Jose
 </div>
