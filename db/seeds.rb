@@ -1,9 +1,10 @@
 require 'faker'
 
 3.times do
-  u = User.create!(
+  u = User.new(
     email:    Faker::Internet.safe_email,
-    password: "password"
+    password: "password",
+    name: Faker::Hipster.sentence(1)
   )
   u.skip_confirmation!
   u.save!
@@ -23,6 +24,10 @@ end
 #i.update_attributes(created_at: i.created_at - 3.days)
 
 items = Item.all
+
+items.each do |i|
+  i.update_attributes(created_at: i.created_at - rand(1..7).days)
+end
 
 puts "Seed finished"
 puts "#{User.count} users created"
