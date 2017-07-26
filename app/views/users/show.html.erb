@@ -1,44 +1,23 @@
-<<<<<<< HEAD
-<h3> <%= @user.email %> </h3>
-
-<div class="row">
-  <div class="col-md-6">
-    <p id="index-title"><%#= link_to 'Edit Your Profile', edit_user_registration_path %></p>
-
-    <h3>Create a New To-Do Item</h3>
-    <%= render partial: 'items/form' %>
-  </div>
-
-  <div class="col-md-6">
-  <!--&nbsp-->
-    <h3>Current Items:</h3>
-  <% @items.each do |item| %>
-    <%= render partial: 'items/item', locals: { item: item } %>
-  <% end %>
-  </div>
-
-=======
 <div class="container">
   <h3> Let's start started <%= current_user.email %>!</h3>
-  </br>
+</br>
 <div class="container">
   <h4> Here you can:</h4>
-    <p> Create To-Do items</p>
-    <p>Mark items complete by clicking the checkmark.</p>
-    <p><strong>Your items will delete after 7 days.</strong><p>
-</div>
+  <p> Create To-Do items</p>
+  <p>Mark items complete by clicking the checkmark.</p>
+  <p><strong>Your items will delete after 7 days.</strong><p>
+  </div>
 </br>
 </br>
 <div class="container">
   <h4>My Pending Items:</h4>
-    <%= render partial: "items/item", locals: {user: @user, items: @user.items.where(completed: false)} %>
+  <%= render partial: "items/item", locals: {user: @user, items: @user.items.where(completed: false)} %>
 </br>
 <h4>My Completed Items:</h4>
-  <%= render partial: "items/item", locals: {user: @user, items: @user.items.where(completed: true)} %>
+<%= render partial: "items/item", locals: {user: @user, items: @user.items.where(completed: true)} %>
 </br>
 
-  <h4>Add a To-Do item: </h4>
-    <%= render partial: "items/form", locals: {user: @user} %>
+<h4>Add a To-Do item: </h4>
+<%= render partial: "items/form", locals: {user: @user} %>
 </div>
->>>>>>> Jose
 </div>

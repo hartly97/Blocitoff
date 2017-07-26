@@ -1,34 +1,11 @@
-<<<<<<< HEAD
-<!--<div class="list-group-item">
-  <h4 class='list-group-item-heading'>--><%#= item.name %>
-  <%#= link_to "", user_item_path(item.id, user_id: current_user.id), method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
-
-
-
-<!--<div id="item-check" class="media">
-  <div class="d-flex align-self-start mr-3">
-    <div class="media-body">
-      <h4 class="mt-0">-->
-      <%#= item.name %>
-      <!--</h4>
-    </div>
-  </div>
-</div>-->
-
-<div class="list-group-item">
-
-  <h4 class='list-group-item-heading'>
-    <%= item.name %>
-    <%= link_to "", "/users/#{current_user.id}/items/#{item.id}", method: :delete, class: 'glyphicon glyphicon-remove' %></h4>
-=======
 <div class="field">
   <% items.each do |item| %>
   <ul class="list">
     <li class="to-do-list-items"><div class="item-name"><%= "#{item.name } #{item.completed ? 'done' : 'pending'}"%> </div>
-     <%= link_to "", user_item_toggle_path(@user, item), method: :put, class: 'complete-icon glyphicon glyphicon-ok',title:"mark item as complete", remote: true %>
-     <small class="time-ago">created <%= distance_of_time_in_words(Time.now, item.created_at) %> ago</small>
-   </li>
+      <%= link_to "", user_item_toggle_path(@user, item), method: :put, class: 'complete-icon glyphicon glyphicon-ok',title:"mark item as complete", remote: true %>
+      <small class="time-ago">created <%= distance_of_time_in_words(Time.now, item.created_at) %> ago</small>
+    </li>
   </ul>
   <% end %>
->>>>>>> Jose
+
 </div>

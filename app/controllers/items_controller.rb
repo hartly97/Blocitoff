@@ -12,9 +12,7 @@ class ItemsController < ApplicationController
     end
   end
 
-<<<<<<< HEAD
 
-=======
   def destroy
     @items = Item.find(params[:id])
     if @items.destroy
@@ -31,17 +29,8 @@ class ItemsController < ApplicationController
     item.save
     redirect_to current_user
   end
->>>>>>> Jose
 
 
-def destroy
-    @items = Item.find(params[:id])
-    @items.destroy
-    respond_to do |format|
-      format.html { redirect_to root_path, notice: "Item Deleted" }
-      format.js {flash.now[:notice] = "Item Deleted"}
-    end
-end
   private
 
   def item_params
