@@ -1,20 +1,13 @@
 Rails.application.routes.draw do
 
 
-  #devise_for :users
-  #resources :users, only: [:show] do
-  #  resources :items, only: [:create]
-  #end
 
-  #get 'items/new'
-
-  #root 'user#show'
-#end
-
-devise_for :users, controllers: { confirmations: 'confirmations' }
+  devise_for :users
 
   resources :users, only: [:show] do
-    resources :items, only: [:create, :destroy]
+    resources :items, only: [:create, :destroy] do
+      put :toggle
+    end
   end
 
   authenticated :user do

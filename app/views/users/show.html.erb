@@ -10,9 +10,13 @@
 </br>
 </br>
 <div class="container">
-  <h4>My Items:</h4>
-    <%= render partial: "items/item", locals: {user: @user} %>
+  <h4>My Pending Items:</h4>
+    <%= render partial: "items/item", locals: {user: @user, items: @user.items.where(completed: false)} %>
 </br>
+<h4>My Completed Items:</h4>
+  <%= render partial: "items/item", locals: {user: @user, items: @user.items.where(completed: true)} %>
+</br>
+
   <h4>Add a To-Do item: </h4>
     <%= render partial: "items/form", locals: {user: @user} %>
 </div>

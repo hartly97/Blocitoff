@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @items = Item.find(params[:id])
-    @items.destroy
+    if @items.destroy
     flash[:notice] = "Item has been deleted!"
   else
     flash[:alert] = "There was an error completing the item. Try again."
@@ -22,8 +22,16 @@ class ItemsController < ApplicationController
     end
   end
 
+  def toggle
+    item = Item.find(params[:item_id])
+    item.completed = !item.completed
+    item.save
+    redirect_to current_user
+  end
+
   private
 
   def item_params
     params.require(:item).permit(:name)
   end
+end
