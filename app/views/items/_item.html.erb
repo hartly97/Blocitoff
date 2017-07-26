@@ -1,3 +1,10 @@
-<div class="list-group-item">
-  <h4 class='list-group-item-heading'><%= item.name %></h4>
+<div class="field">
+  <% @user.items.each do |item| %>
+  <ul class="list">
+    <li class="to-do-list-items"><div class="item-name"><%= item.name %></div>
+     <%= link_to "", user_item_path(user_id: @user.id, id: item.id), method: :delete, class: 'complete-icon glyphicon glyphicon-ok',title:"mark item as complete", remote: true %>
+     <small class="time-ago">created <%= distance_of_time_in_words(Time.now, item.created_at) %> ago</small>
+   </li>
+  </ul>
+  <% end %>
 </div>

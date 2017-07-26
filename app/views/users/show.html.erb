@@ -1,16 +1,19 @@
-<div class="row">
-  <div class="col-md-8">
-    <div class="media">
-      <br />
-      <div class="media-body">
-        <h2 class="media-heading"><%= @user.email %></h2>
-      </div>
-    </div>
-    <div class='col-md-4'>
-      <%= render @items %>
-    </div>
-    <div class='col-md-6'>
-      <%= render partial: 'items/form', locals: {user: @user} %>
-    </div>
-  </div>
+<div class="container">
+  <h3> Let's start started <%= current_user.email %>!</h3>
+  </br>
+<div class="container">
+  <h4> Here you can:</h4>
+    <p> Create To-Do items</p>
+    <p>Mark items complete by clicking the checkmark.</p>
+    <p><strong>Your items will delete after 7 days.</strong><p>
+</div>
+</br>
+</br>
+<div class="container">
+  <h4>My Items:</h4>
+    <%= render partial: "items/item", locals: {user: @user} %>
+</br>
+  <h4>Add a To-Do item: </h4>
+    <%= render partial: "items/form", locals: {user: @user} %>
+</div>
 </div>
