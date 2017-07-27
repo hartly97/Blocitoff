@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   #get 'items/new'
 
-  #root 'user#show'
+  root 'user#show'
 
-  root 'welcome#index'
+  #root 'welcome#index'
   end
