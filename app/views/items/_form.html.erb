@@ -1,7 +1,7 @@
 <div class="field">
   <%= form_for :items, url: user_items_path(user_id: @user.id), method: :post do |f| %>
   <div class="form-group">
-    <%= f.text_field :name, class: "form-control", autofocus: true, placeholder: "Enter a new Item"%>
+    <%= f.text_field :name, autofocus: true, placeholder: "Enter a new Item"%>
   </br>
   <%= f.submit "Add", class: "btn btn-warning" %> <!--submit-btn-sign-up-->
 </div>

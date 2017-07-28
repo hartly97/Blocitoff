@@ -1,9 +1,9 @@
 class ItemsController < ApplicationController
   def create
-    @items = current_user.items.build(params[:name])
-    @items.name = params[:items][:name]
+    @item = current_user.items.build(params[:name])
+    @item.name = params[:items][:name]
 
-    if @items.save
+    if @item.save
       flash[:notice] = "Item saved"
       redirect_to root_path
     else
@@ -14,9 +14,9 @@ class ItemsController < ApplicationController
 
 
   def destroy
-    @items = Item.find(params[:id])
-    if @items.destroy
-    flash[:notice] = "Item has been deleted!"
+    #@item = Item.find(params[:id])
+    if @item.destroy
+    flash[:notice] = "\"#{@item.name}\"Item has been deleted!"
   else
     flash[:alert] = "There was an error completing the item. Try again."
     redirect_to current_user

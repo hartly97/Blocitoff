@@ -1,25 +1,113 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* universal */
+
+body {
+  padding-top: 60px;
+  background-color:yellow;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
 
 .center {
   text-align: center;
 }
 
-.jumbotron {
-  background-image: asset-url('genealogy.jpg');
-  background-size: cover;
-  height: 300px;
+.center h1 {
+  margin-bottom: 10px;
 }
 
-.jumbotron h1 {
+.navbar {
+  background-color: orange;
+}
+
+/*** welcome page not signed in ***/
+/*.jumbotron{
+  border: 10px orange solid;
+  /*width: 75vw;*/
+  /*vertical-align: middle;
+  min-height: 50vh;
+  margin-top: 10vh;
+  padding: 3%;
+
+}*/
+.jumbotron{
+  border: 3px orange solid;
+  /*width: 85vw;*/
+  vertical-align: middle;
+  min-height: 50vh;
+  margin-top: 8vh;
+  padding: 12%;
+  background-image: image_url('genealogy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.banner {
+  text-align: center;
+  background-color: orange;
+  min-height: 90%;
+  border: 3px darkorange solid;
+  margin: auto;
+  padding: 2% 8%;
+  width: 95%;
+  vertical-align: middle;
+}
+
+/*.jumbotron h1 {
   color: orange;
   text-align: center;
   margin-bottom: 30px;
   letter-spacing: -1px;
-  font-weight: bold;
+  font-weight:bold;
+}*/
+/*@media (min-width: 1000px) {
+
+}*/
+
+/* typography */
+
+h1, h2,/*, h3, h4, h5, h6*/ {
+  line-height: 1;
 }
 
+/*.banner{
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 60px;
+  text-align: center;
+  line-height: 1;
+}*/
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+/*p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}*/
+
+/*.jumbotron {
+  background-image: asset-url('genealogy.jpg');
+  background-size: cover;
+  height: 100px;
+}*/
+
+
+/*
 .btn {
   background-color: darkorange;
 }
@@ -28,3 +116,4 @@
   color: black;
   text-decoration: none;
 }
+*/
