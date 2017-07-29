@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :todos, only: [:new]
-  
+  get 'items/edit'
+
   devise_for :users
 
   resources :users, only: [:show] do

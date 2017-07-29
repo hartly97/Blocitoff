@@ -1,22 +1,23 @@
-<div class="container">
-  <h4> Here you can:</h4>
-  <p> Create To-Do items</p>
-  <p>Mark items complete by clicking the checkmark.</p>
-  <p><strong>Your items will delete after 7 days.</strong><p>
-  </div>
 <div class="container-fluid">
-<h4>Add a To-Do item: </h4>
-<%= render partial: "items/form", locals: {user: @user} %>
+  <h3>Get Started</h3>
+    <p> Create To-Do items</p>
+    <p>Mark items complete by clicking the checkmark.</p>
+    <p><strong>Your items will delete after 7 days.</strong><p>
 </div>
+  <div class="container-fluid">
+    <h3>Add A New Item </h3>
+    <%= render partial: "items/form", locals: {user: @user} %>
+  </div>
 
   <div class="container-fluid">
-<div class="row">
+    <div class="row">
       <div class="col-xs-6 col-md-4"><h3>My Pending Items:</h3>
-  <%= render partial: "items/item", locals: {user: @user, items: @user.items.where(completed: false)} %></div>
-<div class="row">
-    <div class="col-xs-6 col-md-4"><h3>My Completed Items:</h3>
-  <%= render partial: "items/item", locals: {user: @user, items: @user.items.where(completed: true)} %></div>
-  </br>
-</div>
-</div>
-</div
+        <%= render partial: "items/item", locals: {user: @user, items: @user.items.where(completed: false)} %>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><h3>My Completed Items:</h3>
+          <%= render partial: "items/item", locals: {user: @user, items: @user.items.where(completed: true)} %></div>
+        </br>
+      </div>
+    </div>
+    </div

@@ -12,6 +12,17 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+    @item.name = params[:items][:name]
+
+    if @item.save
+      flash[:notice] = "Item saved"
+      redirect_to root_path
+    else
+      flash[:alert] = "Oops, please try again"
+      redirect_to root_path
+    end
+  end
 
   def destroy
     #@item = Item.find(params[:id])
